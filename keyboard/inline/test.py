@@ -1,16 +1,18 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-def about_me_inline():
-    button = InlineKeyboardButton(text="Fullname", callback_data="fullname")
-    button2 = InlineKeyboardButton(text="Photo", callback_data="photo")
-    button3 = InlineKeyboardButton(text="Job", callback_data="job")
-    button4 = InlineKeyboardButton(text="Back ◀️", callback_data="back inline 1")
+def inline_main_menu():
+    button = InlineKeyboardButton(text="Inline Keyboard 1", callback_data="keyboard_1")
+    button2 = InlineKeyboardButton(text="Dostingizga ulashish", switch_inline_query="")
+    button4 = InlineKeyboardButton(text="Ortga Alerntsiz", callback_data="back_1")
+    button3 = InlineKeyboardButton(text="Ortga Alernt bilan", callback_data="back_2")
+    button5 = InlineKeyboardButton(text="Url ochish", url="https://github.com/shohruh223/AiogramBoTutorialVersion2/")
 
     ikm = InlineKeyboardMarkup(
         inline_keyboard=[
-            [button, button2, button3],
-            [button4],
+            [button, button2],
+            [button5],
+            [button3, button4],
         ]
     )
     return ikm
