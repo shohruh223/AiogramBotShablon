@@ -1,19 +1,23 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
-def contact_menu():
-    button = KeyboardButton(text="Contact", request_contact=True)
+def menu():
+    button = KeyboardButton(text="User")
+
     rkm = ReplyKeyboardMarkup(
         keyboard=[
-            [button]],
+            [button]
+        ],
         resize_keyboard=True)
     return rkm
 
 
-def location_menu():
-    button = KeyboardButton(text="Location", request_location=True)
+def back():
+    button = KeyboardButton(text="Back")
+
     rkm = ReplyKeyboardMarkup(
         keyboard=[
-            [button]],
+            [button]
+        ],
         resize_keyboard=True)
     return rkm
