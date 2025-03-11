@@ -1,5 +1,5 @@
 from aiogram import Router
-from .users import start, qrcode_generator
+from .users import start, RemoveBG
 
 
 def setup_message_routers() -> Router:
@@ -7,6 +7,6 @@ def setup_message_routers() -> Router:
 
     # Users routers
     router.include_router(start.router)
-    router.include_router(qrcode_generator.router)
+    router.include_router(RemoveBG.router)
 
     return router
