@@ -1,5 +1,5 @@
 from aiogram import Router
-from .users import start, RemoveBG
+from .users import start, states_handler
 
 
 def setup_message_routers() -> Router:
@@ -7,6 +7,6 @@ def setup_message_routers() -> Router:
 
     # Users routers
     router.include_router(start.router)
-    router.include_router(RemoveBG.router)
+    router.include_router(states_handler.router)
 
     return router
