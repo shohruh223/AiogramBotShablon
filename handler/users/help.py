@@ -1,10 +1,9 @@
-from aiogram import Bot, Dispatcher, types, F
+from aiogram import types, Router
 from aiogram.filters import Command
-from aiogram import Router
 
 router = Router()
 
 
 @router.message(Command("help"))
-async def send_start(message: types.Message):
-    await message.answer(text="Sizda qanday muammo bor")
+async def send_welcome(message: types.Message):
+    await message.answer(text="Sizga qanday yordam bera olaman?")
